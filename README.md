@@ -25,10 +25,6 @@ Screenshot of extension options:
 
 ## Getting started
 
-### 1️⃣ Create your own copy
-
-1. Click [<kbd>Use this template</kbd>](https://github.com/fregante/browser-extension-template/generate) to make a copy of your own. 😉
-
 ### 🛠 Build locally
 
 1. Checkout the copied repository to your local machine eg. with `git clone https://github.com/my-username/my-awesome-extension/`

@@ -1,23 +1,38 @@
+import select from 'select-dom';
+import elementReady from 'element-ready';
 import hljs from 'highlight.js';
 
 
+const ellipsisWidth = 70;
+
+function updateUI() {
+
+}
+
+
 async function init() {
-	// hljs.configure({
-	// 	cssSelector: 'p'
-	// });
-	//
-	// hljs.highlightAll();
+
+	console.log("" +
+		"\n" +
+		"\n" +
+		"!!!!!!!!! " +
+		"EXTENSION INIT CALLED!!!!");
+
+	hljs.configure({
+		cssSelector: 'p'
+	});
+
+	hljs.highlightAll();
 
 	document.addEventListener('DOMContentLoaded', (event) => {
 		document.querySelectorAll('p').forEach((el) => {
-			el.className = "python";
 			hljs.highlightElement(el);
 		});
 	});
 
-	// document.querySelectorAll('p').forEach((el) => {
-	// 	hljs.highlightElement(el);
-	// });
+	document.querySelectorAll('p').forEach((el) => {
+		hljs.highlightElement(el);
+	});
 
 	// const observer = new MutationObserver(updateUI);
 	// const observeFragment = (): void => {
@@ -37,4 +52,6 @@ async function init() {
 	// document.addEventListener('pjax:end', observeFragment);
 }
 
-init();
+void init();
+
+console.log("highlight text run!!!");
