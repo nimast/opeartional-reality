@@ -1,22 +1,14 @@
 {
-  "name": "Operational Reality",
+  "name": "Operational Poetry",
   "version": "0.0.1",
-  "description": "An awesome new browser extension",
-  "homepage_url": "https://github.com/fregante/browser-extension-template",
+  "description": "A Browser extension explicitating the executability of language",
+  "homepage_url": "https://operationalpoetry.art",
   "manifest_version": 2,
   "minimum_chrome_version": "74",
-  "applications": {
-	"gecko": {
-	  "id": "awesome-extension@notlmn.github.io",
-	  "strict_min_version": "67.0"
-	}
-  },
   "icons": {
 	"128": "icon.png"
   },
   "permissions": [
-	"https://github.com/fregante/browser-extension-template/*",
-	"storage",
 	"activeTab"
   ],
   "content_scripts": [
