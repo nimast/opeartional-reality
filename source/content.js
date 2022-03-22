@@ -1,21 +1,20 @@
 import hljs from 'highlight.js';
 
-
 async function init() {
-	// hljs.configure({
+	// Hljs.configure({
 	// 	cssSelector: 'p'
 	// });
 	//
 	// hljs.highlightAll();
 
-	document.addEventListener('DOMContentLoaded', (event) => {
-		document.querySelectorAll('p').forEach((el) => {
-			el.className = "python";
-			hljs.highlightElement(el);
-		});
+	document.addEventListener('DOMContentLoaded', event => {
+		for (const element of document.querySelectorAll('p')) {
+			element.className = 'python';
+			hljs.highlightElement(element);
+		}
 	});
 
-	// document.querySelectorAll('p').forEach((el) => {
+	// Document.querySelectorAll('p').forEach((el) => {
 	// 	hljs.highlightElement(el);
 	// });
 

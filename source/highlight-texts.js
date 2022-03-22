@@ -2,39 +2,34 @@ import select from 'select-dom';
 import elementReady from 'element-ready';
 import hljs from 'highlight.js';
 
-
 const ellipsisWidth = 70;
 
-function updateUI() {
-
-}
-
+function updateUI() {}
 
 async function init() {
-
-	console.log("" +
-		"\n" +
-		"\n" +
-		"!!!!!!!!! " +
-		"EXTENSION INIT CALLED!!!!");
+	console.log(''
+		+ '\n'
+		+ '\n'
+		+ '!!!!!!!!! '
+		+ 'EXTENSION INIT CALLED!!!!');
 
 	hljs.configure({
-		cssSelector: 'p'
+		cssSelector: 'p',
 	});
 
 	hljs.highlightAll();
 
-	document.addEventListener('DOMContentLoaded', (event) => {
-		document.querySelectorAll('p').forEach((el) => {
-			hljs.highlightElement(el);
-		});
+	document.addEventListener('DOMContentLoaded', event => {
+		for (const element of document.querySelectorAll('p')) {
+			hljs.highlightElement(element);
+		}
 	});
 
-	document.querySelectorAll('p').forEach((el) => {
-		hljs.highlightElement(el);
-	});
+	for (const element of document.querySelectorAll('p')) {
+		hljs.highlightElement(element);
+	}
 
-	// const observer = new MutationObserver(updateUI);
+	// Const observer = new MutationObserver(updateUI);
 	// const observeFragment = (): void => {
 	// 	const ajaxFiles = select('#files ~ include-fragment[src*="/file-list/"]');
 	// 	if (ajaxFiles) {
@@ -54,4 +49,4 @@ async function init() {
 
 void init();
 
-console.log("highlight text run!!!");
+console.log('highlight text run!!!');
