@@ -5,7 +5,7 @@ env:
 # SOURCE: https://github.com/fregante/ghatemplates
 # OPTIONS: {"exclude":["on.schedule"]}
 
-name: Release
+name: Version
 on:
   workflow_dispatch: null
 jobs:
